@@ -1,0 +1,40 @@
+<h1 mat-dialog-title>{{editMode ? 'Leave a wishlist' : 'Wish'}}</h1>
+<ng-container  *ngIf="!!editMode">
+    <div mat-dialog-content>
+        <p>What's do you wish from santa?</p>
+        <mat-form-field  class="wider">
+          <textarea matInput tabindex="1" [(ngModel)]="data.wishlist.wish"></textarea>
+        </mat-form-field>
+        <p>Your name for santa to find, if you want to.</p>
+        <mat-form-field  class="wider">
+          <input matInput tabindex="1" [(ngModel)]="data.wishlist.name">
+        </mat-form-field>
+        <p>Choose a sock to hang on the wall!</p>
+        <div class="sock-selection">
+          <img src="assets/sock1.png" class="sock" (click)="setSock(1)" [ngClass]="{'sock-selected': data.wishlist.sock === 1}"/>
+          <img src="assets/sock2.png" class="sock"  (click)="setSock(2)" [ngClass]="{'sock-selected': data.wishlist.sock === 2}"/>
+          <img src="assets/sock3.png" class="sock" (click)="setSock(3)"  [ngClass]="{'sock-selected': data.wishlist.sock === 3}"/>
+          <img src="assets/sock4.png" class="sock"  (click)="setSock(4)"  [ngClass]="{'sock-selected': data.wishlist.sock === 4}"/>
+        </div>
+      
+      </div>
+      <div mat-dialog-actions >
+        <button mat-raised-button color="primary" (click)="save()" >OK</button>
+        <button mat-button (click)="onNoClick()" tabindex="-1">No Thanks</button>
+      </div>
+</ng-container>
+<ng-container *ngIf="!editMode">
+  <div class="wish-container">
+    <img src="assets/secretsanta.png"/>
+    <div>
+      <p>Dear Santa, I wish for: </p>
+        <p class="wish">
+            {{ data.wishlist.wish }}
+          </p>
+          <p>
+            {{'Sincerely, ' +(data.wishlist.name && data.wishlist.name !== '' ? data.wishlist.name : 'unknown')}}
+          </p>
+    </div>
+    <img src="assets/footer.png"/>
+  </div>
+</ng-container>

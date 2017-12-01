@@ -1,0 +1,26 @@
+.fireplace {
+    background-image: url("../assets/chrismasbackdrop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-column: 3 / span 4;
+    grid-row: 4 / span 4;
+    margin-top:55px;
+}
+
+.wall-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+.wall {
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(7, 100px);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+

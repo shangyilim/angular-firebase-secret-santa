@@ -1,3 +1,30 @@
-<h1>
-  {{title}}
-</h1>
+<div>
+  <div class="wall-container">
+    <div class="wall">
+      <span *ngFor="let position of sockPositionArea" [className]="'sock-at-'+position" >
+          <app-sock-display  *ngIf="!!wishAtPosition(position); else noSock"  [wish]="wishAtPosition(position)"></app-sock-display>
+          <ng-template  #noSock >
+             <app-socks-button [position]="position">
+               </app-socks-button>
+          </ng-template>
+
+      </span>
+      <!-- <span>
+        <app-sock-display  *ngIf="!!wishAtPosition(11); else noSock"  [wish]="wishAtPosition(11)"></app-sock-display>
+       <ng-template  #noSock >
+          <app-socks-button [position]="11">
+            </app-socks-button>
+       </ng-template>
+      </span> -->
+      <!-- <span>test2</span>
+      <span>test3</span>
+      <span>test4</span>
+      <span>test5</span>
+      <span>test6</span>
+
+      <span>test7</span> -->
+      <div class="fireplace">
+      </div>
+    </div>
+  </div>
+</div>

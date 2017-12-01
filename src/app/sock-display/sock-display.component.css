@@ -1,0 +1,12 @@
+.sock{
+    width:60%;
+    height:60%;
+    cursor: pointer; 
+}
+.sock-container{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px;
+        justify-items: center;
+        align-items: center;
+}
