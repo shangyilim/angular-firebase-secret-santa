@@ -2,7 +2,7 @@
 .sock-frame:hover {
     border-width: 3px;
     border-style:solid;
-    border-color: #cabeb84d;
+    border-color: #ea8a6091;
     height:100%;
     text-align:center;
     vertical-align: middle;
@@ -20,5 +20,5 @@
      cursor: pointer; 
 }
 .sock-frame:hover {
-    color:#cabeb8;
+    color:#ea8a60;
 }

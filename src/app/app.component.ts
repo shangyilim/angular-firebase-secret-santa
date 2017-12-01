@@ -54,6 +54,7 @@ export class AppComponent implements AfterContentInit {
   
   openDialog(): void {
     let dialogRef = this.dialog.open(GreetingsComponent, {
+     
     });
 
     dialogRef.afterClosed().subscribe(result => {
