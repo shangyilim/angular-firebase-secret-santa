@@ -8,6 +8,8 @@
 
 body{
     font-family: "Roboto-Light";
+    background-image: url('assets/bricks.png');
+    background-repeat: repeat;
 }
 
 #snow{
